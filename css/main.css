@@ -30,19 +30,26 @@ rgba(248, 209, 165, 0.8)
 
 /* Base styles */
 
-* {
+html {
+    font-size: 62.5%;
+}
+
+*
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 body {
     font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    padding: 2rem;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 /* HEADER SECTION */
@@ -62,12 +69,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 2rem;
-    left: 2.5rem;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    width: 3rem;
+    width: 4rem;
 }
 .heading-box {
     margin: auto;
@@ -84,7 +91,7 @@ body {
 
 .heading-primary__main {
     font-family: 'Titan One';
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: 400;
     letter-spacing: .5rem;
     animation-name: moveInLeft;
@@ -94,7 +101,7 @@ body {
 
 .heading-primary__sub {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1rem;
     animation-name: moveInRight;
@@ -105,11 +112,11 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -121,11 +128,11 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -135,11 +142,11 @@ body {
 }@keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -151,7 +158,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% {
@@ -164,9 +171,9 @@ body {
 .button:visited {
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 100px;
+    border-radius: 10rem;
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: 2rem 4rem;
     display: inline-block;
     transition: all .2s;
     position: relative;
@@ -174,12 +181,12 @@ body {
 
 .button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
 }
 
 .button:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
 .button::after {
@@ -187,7 +194,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
