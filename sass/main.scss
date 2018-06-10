@@ -26,6 +26,8 @@ $sand: #f8d1a5;
 $water: #94f1fd;
 $sky: #6c80f6;
 $color-text-primary: #777;
+$color-white: #fff;
+$color-black: #000;
 
 /* Base styles */
 
@@ -64,48 +66,52 @@ body {
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     display: flex;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        width: 4rem;
+    }
+
+    &__text-box  {
+        margin: auto;
+        text-align: center;
+    }
 }
 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
 
-.header__logo {
-    width: 4rem;
-}
-.header__text-box  {
-    margin: auto;
-    text-align: center;
-}
+
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     display: flex;
     align-items: center;
     flex-flow: column wrap;
     backface-visibility: hidden;
     margin-bottom: 3rem;
-}
 
-.heading-primary__main {
-    font-family: 'Titan One';
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: .5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
+    &__main {
+        font-family: 'Titan One';
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: .5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
 
-.heading-primary__sub {
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1rem;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    &__sub {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1rem;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
 }
 
 @keyframes moveInLeft {
@@ -138,7 +144,9 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
-}@keyframes moveInRight {
+}
+
+@keyframes moveInRight {
     0% {
         opacity: 0;
         transform: translateX(10rem);
@@ -166,58 +174,73 @@ body {
     }
 }
 
-.button:link,
-.button:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 10rem;
-    cursor: pointer;
-    padding: 2rem 4rem;
-    display: inline-block;
-    transition: all .2s;
-    position: relative;
-}
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 10rem;
+        cursor: pointer;
+        padding: 2rem 4rem;
+        display: inline-block;
+        transition: all .2s;
+        position: relative;
+    }
 
-.button:hover {
+    &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    box-shadow: 0 1rem 2rem rgba($color-black, .1);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .1);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &_white {
+        background-color: $color-white;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &_primary  {
+        color: $sand;
+        animation-name: moveInBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-delay: .75s;
+        animation-fill-mode: backwards;
+    }
 }
 
-.button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-}
 
-.button::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
 
-.button:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-.button_white {
-    background-color: #fff;
-}
 
-.button_white::after {
-    background-color: #fff;
-}
 
-.button_primary  {
-    color: $sand;
-    animation-name: moveInBottom;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-delay: .75s;
-    animation-fill-mode: backwards;
-}
+
+
+
+
+
+
+
