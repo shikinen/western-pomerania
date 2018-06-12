@@ -1,5 +1,22 @@
+main {
+    background-color: $background-grey;
+}
+
 .section-about {
-    background-color: #f7f7f7;
     padding: 30rem 0;
     margin-top: -20vh;
+}
+
+.section-features {
+    padding: 20rem 0;
+    margin-top: -13rem;
+    background-image: linear-gradient(
+        rgba($water, 0.8),
+        rgba($sand, 0.8)),
+    url('../img/beach-steps.jpg');
+    background-size: cover;
+    transform: skewY(-8deg);
+    >* {
+        transform: skewY(8deg);
+    }
 }

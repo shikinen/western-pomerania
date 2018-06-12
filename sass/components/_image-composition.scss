@@ -9,6 +9,13 @@
          transition: all .2s ease-in-out;
          outline-offset: 2rem;
 
+         &:hover {
+            outline: 1.5rem solid $water;
+            transform: scale(1.05) translateY(5px);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .4);
+            z-index: 20;
+        }
+        
         &_p1 {
             left: 0;
             top: -2rem;
@@ -23,14 +30,12 @@
         &_p3 {
             left: 20%;
             top: 10rem;
+            &:hover {
+                outline: 1.5rem solid $sand;
+            }
         }
 
-        &:hover {
-            outline: 1.5rem solid $grass;
-            transform: scale(1.05) translateY(5px);
-            box-shadow: 0 2.5rem 4rem rgba($color-black, .4);
-            z-index: 20;
-        }
+
     }
 
     &:hover &__photo:not(:hover) {

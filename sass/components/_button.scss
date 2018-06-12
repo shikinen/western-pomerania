@@ -59,14 +59,14 @@
     &_text {
         &:link,
         &:visited {
-            color: $grass;
-            border-bottom: 1px solid $grass;
+            color: $sand;
+            border-bottom: 1px solid $sand;
             padding: 3px;
             transition: all .2s ease-in-out;
         }
 
         &:hover {
-            background-color: $grass;
+            background-color: $sand;
             color: $color-white;
             box-shadow: 0 1rem 2rem rgba($color-black, .15);
             transform: translateY(-2px);
