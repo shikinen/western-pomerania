@@ -1,0 +1,111 @@
+.card {
+    perspective: 100rem;
+    position: relative;
+    height: 52em;
+
+    &__side {
+        height: 52rem;
+        width: 100%;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &_front {
+            background-color: $color-white;
+        }
+
+        &_back {
+            color: white;
+            transform: rotateY(180deg);
+            &_1 {
+                background-image: linear-gradient(to right bottom, $sand, $sun);
+            }
+
+            &_2 {
+                background-image: linear-gradient(to right bottom, $mint, $grass);
+            }
+
+            &_3 {
+                background-image: linear-gradient(to right bottom, $water, $sky);
+            }
+        }
+    }
+
+    &:hover &__side_front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side_back {
+        transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        background-blend-mode: screen;
+        height: 23rem;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &_1 {
+            
+            background-image: url('../img/card_1.jpg'), linear-gradient(to right bottom, $sand, $sun);
+        }
+
+        &_2 {
+            background-image: url('../img/card_2.jpg'), linear-gradient(to right bottom, $mint, $grass);
+        }
+
+        &_3 {
+            background-image: url('../img/card_3.jpg'), linear-gradient(to right bottom, $water, $sky);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12.5rem;
+        right: 2rem;
+        text-align: right;
+        width: 60%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &_1 {
+            background-image: linear-gradient(to right bottom, rgba($sand, .85), rgba($sun, .85));
+        }
+        &_2 {
+            background-image: linear-gradient(to right bottom, rgba($mint, .85), rgba($grass, .85));
+        }
+        &_3 {
+            background-image: linear-gradient(to right bottom, rgba($water, .85), rgba($sky, .85));
+        }
+    }
+
+    &__details {
+        padding: 2rem;
+        
+        ul {
+            list-style-type: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $subtle-grey;
+                }
+            }
+        }
+    }
+}

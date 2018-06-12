@@ -1,5 +1,5 @@
 main {
-    background-color: $background-grey;
+    background-color: $subtle-grey;
 }
 
 .section-about {
@@ -12,11 +12,15 @@ main {
     margin-top: -13rem;
     background-image: linear-gradient(
         rgba($water, 0.8),
-        rgba($sand, 0.8)),
+        rgba($sky, 0.8)),
     url('../img/features-background.jpg');
     background-size: cover;
     transform: skewY(-8deg);
     >* {
         transform: skewY(8deg);
     }
+}
+
+.section-tours {
+    padding: 15rem 0 50rem 0;
 }

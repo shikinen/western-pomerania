@@ -15,7 +15,7 @@
     }
 
     &_primary  {
-        color: $sand;
+        color: $sky;
         text-transform: uppercase;
         border-radius: 10rem;
         padding: 2rem 4rem;
@@ -59,14 +59,14 @@
     &_text {
         &:link,
         &:visited {
-            color: $sand;
-            border-bottom: 1px solid $sand;
+            color: $sky;
+            border-bottom: 1px solid $sky;
             padding: 3px;
             transition: all .2s ease-in-out;
         }
 
         &:hover {
-            background-color: $sand;
+            background-color: $sky;
             color: $color-white;
             box-shadow: 0 1rem 2rem rgba($color-black, .15);
             transform: translateY(-2px);
