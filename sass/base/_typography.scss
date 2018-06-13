@@ -47,6 +47,10 @@ body {
     letter-spacing: 2px;
     transition: all .2s ease-in-out;
 
+    &_solid {
+        color: $sky;
+    }
+
     &:hover {
         transform: scale(1.2);
     }

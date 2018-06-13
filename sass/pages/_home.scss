@@ -1,8 +1,5 @@
-main {
-    background-color: $subtle-grey;
-}
-
 .section-about {
+    background-color: $subtle-grey;
     padding: 30rem 0;
     margin-top: -20vh;
 }
@@ -22,10 +19,30 @@ main {
 }
 
 .section-tours {
-    padding: 20rem 0;
+    background-color: $subtle-grey;
+    padding: 25rem 0 20rem 0;
+    margin-top: -8rem;
 }
 
 .section-stories {
     padding: 15rem 0;
-    background-color: aqua;
+    position: relative;
+}
+
+.section-booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $water, $sky);
+}
+
+.booking-box {
+    background-image: linear-gradient(105deg,
+                                     rgba($color-white, .8) 0%,
+                                     rgba($color-white, .8) 50%, 
+                                     transparent 50%), 
+                                     url('../img/booking-image.jpg');
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+
+    height: 50rem;
 }
