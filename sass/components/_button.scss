@@ -38,12 +38,12 @@
         }
     }
 
-    &_green {
-        background-color: $grass;
+    &_sky {
+        background-color: $sky;
         color: $color-white;
 
         &::after {
-            background-color: $grass;
+            background-color: $sky;
         }
     }
     
