@@ -23,8 +23,6 @@
             color: $color-white;
             transform: rotateY(180deg);
             display: flex;
-            justify-content: center;
-            align-items: center;
             &_1 {
                 background-image: linear-gradient(to right bottom, $sand, $sun);
             }
@@ -116,6 +114,11 @@
     }
 
     //BACK SIDE STYLING
+
+    &__cta {
+        margin: auto;
+    }
+    
     &__price-box {
         text-align: center;
         margin-bottom: 8rem;
