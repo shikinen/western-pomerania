@@ -5,3 +5,24 @@
         clear: both;
     }
 }
+
+//RESPONSIVE MANAGER
+/*
+1em = 16px
+
+*/
+
+@mixin media($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content; } //600px
+    }
+    @if $breakpoint == tablet-port {
+        @media (max-width: 56.25em) { @content; } //900px
+    }
+    @if $breakpoint == tablet-land {
+        @media (max-width: 75em) { @content; } //1200px
+    }
+    @if $breakpoint == desktop-big {
+        @media (min-width: 112.5em) { @content; } //1800px
+    }
+}
