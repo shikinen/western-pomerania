@@ -24,16 +24,16 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> About Pomerania</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span> Region features</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span> Attractions</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span> Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span> Book now</a></li>
+                    <li class="navigation__item"><a href="#popup" class="navigation__link"><span>01</span> About Pomerania</a></li>
+                    <li class="navigation__item"><a href="#popup" class="navigation__link"><span>02</span> Region features</a></li>
+                    <li class="navigation__item"><a href="#popup" class="navigation__link"><span>03</span> Attractions</a></li>
+                    <li class="navigation__item"><a href="#popup" class="navigation__link"><span>04</span> Stories</a></li>
+                    <li class="navigation__item"><a href="#popup" class="navigation__link"><span>05</span> Book now</a></li>
                 </ul>
             </nav>
         </div>
         
-        <header class="header">
+        <header class="header" id="header">
             <div class="header__logo-box">
                 <img class="header__logo" src="img/logo-P-white.png" alt="Western Pomerania Logo">
             </div>
@@ -42,7 +42,7 @@
                     <span class="heading-primary__main">Western Pomerania</span>
                     <span class="heading-primary__sub">the sea of excitement</span>
                 </h1>
-                <a href="#" class="button button_white button_animated">Discover our region</a>
+                <a href="#popup" class="button button_white button_animated">Discover our region</a>
             </div>
         </header>
 
@@ -61,7 +61,7 @@
                         <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
                         <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus itaque mollitia nemo similique qui incidunt atque
                             quod accusantium.</p>
-                        <a href="#" class="button-text">Learn more &rarr;</a>
+                        <a href="#popup" class="button-text">Learn more &rarr;</a>
                     </div>
                     <div class="col-1-of-2">
                         <div class="image-composition">
@@ -140,7 +140,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">€199</p>
                                     </div>
-                                    <a href="#" class="button button_white button_tour-1">Book now!</a>
+                                    <a href="#popup" class="button button_white button_tour-1">Book now!</a>
                                 </div>
                             </div>
                         </div>      
@@ -170,7 +170,7 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">€299</p>
                                     </div>
-                                    <a href="#" class="button button_white button_tour-2">Book now!</a>
+                                    <a href="#popup" class="button button_white button_tour-2">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -200,14 +200,14 @@
                                         <p class="card__price-only">Only</p>
                                         <p class="card__price-value">€399</p>
                                     </div>
-                                    <a href="#" class="button button_white button_tour-3">Book now!</a>
+                                    <a href="#popup" class="button button_white button_tour-3">Book now!</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="u-center-text u-margin-top-big">
-                    <a href="#" class="button button_sky">Discover all tours</a>
+                    <a href="#popup" class="button button_sky">Discover all tours</a>
                 </div>
             </section>
 
@@ -257,7 +257,7 @@
                     </div>
 
                     <div class="u-center-text u-margin-top-big">
-                        <a href="#" class="button-text">Read all stories &rarr;</a>
+                        <a href="#popup" class="button-text">Read all stories &rarr;</a>
                     </div>
             </section>
 
@@ -312,16 +312,16 @@
             <div class="footer__bottom">
                 <ul class="footer__navigation">
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Organisation</a>
+                        <a href="#popup" class="footer__link">Organisation</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Contact us</a>
+                        <a href="#popup" class="footer__link">Contact us</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Privacy policy</a>
+                        <a href="#popup" class="footer__link">Privacy policy</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Terms</a>
+                        <a href="#popup" class="footer__link">Terms</a>
                     </li>
                 </ul>
                 <p class="footer__copyright">
@@ -330,65 +330,27 @@
             </div>
         </footer>
 
-        <!--
-        <section class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-                <div class="col-1-of-2">
-                    Col 1 of 2
-                </div>
-            </div>
-
-           
-            
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col 1 of 3
-                </div>
-                <div class="col-2-of-3">
-                    Col 2 of 3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <aside class="popup__side">
+                    <img class="popup__image" src="img/popup-1.jpg" alt="Sea view">
+                    <img class="popup__image" src="img/popup-2.jpg" alt="Meadow woman">
+                </aside>
+                <div class="popup__main">
+                    <a href="#header" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Do you like what you see?</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Feel free to hit the button below to get in touch!</h3>
+                    <p class="popup__text u-margin-bottom-medium">
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Neque laoreet suspendisse interdum consectetur libero id faucibus. Condimentum id venenatis a condimentum vitae. Vitae sapien
+                        pellentesque habitant morbi tristique senectus et netus et. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper
+                        velit. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Augue interdum velit euismod in pellentesque massa.
+                        Sollicitudin ac orci phasellus egestas. Curabitur gravida arcu ac tortor. Sapien pellentesque habitant morbi tristique senectus
+                        et netus et malesuada.
+                    </p>
+                    <a href="mailto:rafalmiodowski@gmail.com" class="button button_sky">Email me</a>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-2-of-4">
-                    Col 2 of 4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col 1 of 4
-                </div>
-                <div class="col-3-of-4">
-                    Col 3 of 4
-                </div>
-            </div>
-        </section>
-         -->
-           
+        </div>
     </body>
 </html>
