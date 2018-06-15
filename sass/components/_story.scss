@@ -24,7 +24,6 @@
 
     &__image {
         height: 100%;
-        backface-visibility: hidden;
         transform: translateX(-3.5rem) scale(1.4);
         transition: all .5s;
     }

@@ -10,14 +10,11 @@ body {
 
 .heading-primary {
     color: $color-white;
-    display: flex;
-    align-items: center;
-    flex-flow: column wrap;
     backface-visibility: hidden;
-    margin-bottom: 3rem;
+
 
     &__main {
-        font-family: 'Titan One';
+        font-family: 'Titan One', Helvetica, Arial, serif;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: .5rem;

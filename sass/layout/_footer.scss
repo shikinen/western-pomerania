@@ -1,5 +1,5 @@
 .footer {
-    background-color: $color-white;
+    background-color: $subtle-grey;
     padding: 10rem;
 
     &__bottom {
@@ -50,7 +50,6 @@
         border-top: 1px solid $less-subtle-grey;
         padding-top: 1.5rem;
         
-        text-align: right;
     }
 
     &__heart {

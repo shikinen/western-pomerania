@@ -1,4 +1,9 @@
 .u-center-text { text-align: center; }
+.u-flexbox-center {            
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
 
 .u-margin-bottom-small { margin-bottom: 1.5rem; }
 .u-margin-bottom-medium { margin-bottom: 3rem; }
