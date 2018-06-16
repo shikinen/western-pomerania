@@ -63,6 +63,16 @@
         display: flex;
         cursor: pointer;
 
+        @include media(tablet-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include media(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
+
         &:hover .navigation__icon::before {
             top: -1rem;
         }
@@ -83,6 +93,15 @@
         background-image: radial-gradient($water, $sky);
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
+        @include media(tablet-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include media(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {

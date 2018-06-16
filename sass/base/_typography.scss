@@ -12,15 +12,20 @@ body {
     color: $color-white;
     backface-visibility: hidden;
 
-
     &__main {
         font-family: 'Titan One', Helvetica, Arial, serif;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: .5rem;
+        line-height: 1.1;
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include media(phone) {
+            letter-spacing: 0;
+            font-size: 5rem;
+        }
     }
 
     &__sub {
@@ -31,6 +36,10 @@ body {
         animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include media(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -44,6 +53,11 @@ body {
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s ease-in-out;
+
+
+    @include media(phone) {
+        font-size: 3rem;
+    }
 
     &_solid {
         color: $sky;

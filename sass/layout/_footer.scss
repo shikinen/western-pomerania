@@ -1,14 +1,22 @@
 .footer {
     background-color: $subtle-grey;
-    padding: 10rem;
+    padding: 10rem 0;
+    @include media(tablet-land) {
+        padding: 6rem 0;
+    }
 
     &__bottom {
         display: flex;
         justify-content: space-between;
+        @include media(tablet-land) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__logo-box {
         text-align: center;
+        margin-bottom: 6rem;
     }
 
     &__navigation {
@@ -17,6 +25,10 @@
         
         list-style-type: none;
         text-transform: uppercase;
+
+        @include media(tablet-land) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__item {
