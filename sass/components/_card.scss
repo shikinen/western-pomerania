@@ -77,10 +77,21 @@
         right: 2rem;
         text-align: right;
         width: 60%;
+
+        @include media(tablet-land) {
+            width: 80%;
+        }
+        @include media(tablet-port) {
+            width: 100%;
+            text-align: center;
+            right: 0;
+            top: 9rem;
+        }
     }
 
     &__heading-span {
         padding: 1rem 1.5rem;
+
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
 
@@ -117,11 +128,11 @@
 
     &__cta {
         margin: auto;
+        padding: 5rem 0;
     }
     
     &__price-box {
         text-align: center;
-        margin-bottom: 8rem;
     }
 
     &__price-only {
@@ -132,5 +143,65 @@
     &__price-value {
         font-size: 6rem;
         font-weight: 300;
+    }
+
+
+    @include media(tablet-port) {
+        height: auto;
+        margin: 0 auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &__side {
+            box-shadow: none;
+            height: auto;
+            width: 100%;
+            position: relative;
+
+            &_back {
+                color: $color-white;
+                transform: rotateY(0);
+                display: flex;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+                &_1 {
+                    background-image: linear-gradient(to right bottom, $sand, $sun);
+                }
+
+                &_2 {
+                    background-image: linear-gradient(to right bottom, $mint, $grass);
+                }
+
+                &_3 {
+                    background-image: linear-gradient(to right bottom, $water, $sky);
+                }
+            }
+        }
+
+        &:hover &__side_front {
+            transform: rotateY(0);
+        }
+
+        //BACK SIDE STYLING
+
+        &__cta {
+            margin: auto;
+            line-height: 1.5;
+            margin-top: 2rem;
+        }
+        
+        &__price-box {
+            margin-bottom: 1rem;
+        }
+
+        &__price-only {
+            font-size: 1.7rem;
+        }
+
+        &__price-value {
+            font-size: 6rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
     }
 }

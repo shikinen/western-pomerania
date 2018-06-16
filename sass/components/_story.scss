@@ -10,15 +10,42 @@
     >* {
         transform: skewX(12deg);
     }
-    
+
+    @include media(tablet-port) {
+        width: 100%;
+        transform: skewX(0);
+        >* {
+            transform: skewX(0);
+        }
+    }
+
+    @include media(phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 5rem;
+    }
+
     &__shape {
         height: 15rem;
         width: 15rem;
         float: left;
+        display: inline-block;
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+
+        @include media(tablet-port) {
+            transform: translateX(-3rem) skewX(0);
+        }
+
+        @include media(phone) {
+            float: none;
+            transform: translateX(0);
+            margin-bottom: 3rem;
+        }
+
         position: relative;
     }
 
