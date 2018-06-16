@@ -2,6 +2,11 @@
     background-color: $subtle-grey;
     padding: 30rem 0;
     margin-top: -20vh;
+
+    @include media(tablet-port) {
+        padding: 27rem 0;
+        padding-top: 32rem;
+    }
 }
 
 .section-features {
@@ -16,21 +21,36 @@
     >* {
         transform: skewY(8deg);
     }
+
+    @include media(tablet-port) {
+        padding: 12rem 0;
+    }
 }
 
 .section-tours {
     background-color: $subtle-grey;
     padding: 25rem 0 20rem 0;
     margin-top: -8rem;
+
+    @include media(tablet-port) {
+        padding: 18rem 0 10rem 0;
+    }
 }
 
 .section-stories {
     padding: 15rem 0;
     position: relative;
+
+    @include media(tablet-port) {
+        padding: 10rem;
+    }
 }
 
 .section-booking {
     padding: 15rem 0;
+    @include media(tablet-port) {
+        padding: 10rem;
+    }
     background-image: linear-gradient(to right bottom, $water, $sky);
 }
 

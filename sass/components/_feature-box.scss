@@ -7,11 +7,18 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.1);
     transition: all .3s ease-in-out;
 
+    @include media(tablet-port) {
+        padding: 2rem;
+    }
+
     &:hover {
         transform: translateY(-1.5rem) scale(1.05);
     }
     &__icon {
         font-size: 7rem;
+        @include media(tablet-land) {
+            font-size: 5rem;
+        }
         background-image: linear-gradient(to bottom, $water, $sky);
         -webkit-background-clip: text;
         color: transparent;
