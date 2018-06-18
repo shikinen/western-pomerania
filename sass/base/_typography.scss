@@ -48,11 +48,16 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     display: inline-block;
-    background-image: linear-gradient(to right, $water, $sky);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: $sky;
     letter-spacing: 2px;
     transition: all .2s ease-in-out;
+
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+        background-image: linear-gradient(to right, $water, $sky);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
 
     @include media(phone) {
