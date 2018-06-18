@@ -4,11 +4,19 @@
     background-image: linear-gradient(
         rgba($water, 0.8),
         rgba($sky, 0.8)),
-        url('../img/hero.jpg');
+        url('../img/hero-small.jpg');
     background-size: cover;
     background-position: center;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @media (min-resolution: 192dpi),
+    (min-width: 125em) {
+        background-image: linear-gradient(
+                          rgba($water, 0.8),
+                          rgba($sky, 0.8)),
+                          url('../img/hero.jpg');
+    }
 
 
     @include media(tablet-port) {

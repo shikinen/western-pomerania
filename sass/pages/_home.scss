@@ -1,16 +1,16 @@
 .section-about {
     background-color: $subtle-grey;
-    padding: 30rem 0;
+    padding: 23rem 0;
     margin-top: -20vh;
 
     @include media(tablet-port) {
         padding: 27rem 0;
-        padding-top: 32rem;
+        padding-top: 23rem;
     }
 }
 
 .section-features {
-    padding: 20rem 0;
+    padding: 25rem 0;
     margin-top: -13rem;
     background-image: linear-gradient(
         rgba($water, 0.8),
